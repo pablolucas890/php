@@ -1,0 +1,50 @@
+Create table cadastro(id int not null auto_increment,
+
+nome varchar(50),
+endereco varchar(50),
+cpf varchar(50),
+telefone varchar(50),
+ primary key (id))
+
+Create table solicitacao(id int not null auto_increment,
+nomeCarro varchar(50),
+ tempo int,
+ data date ,
+  hora time ,
+   situacao varchar(20) ,
+ primary key (id))
+
+
+Create table usuarios(id int not null auto_increment,
+login varchar(50),
+ senha varchar(10),
+ tipo varchar(30) ,
+ primary key (id))
+
+
+INSERT INTO `cadastro` (`id`, `nome`, `endereco`, `cpf`, `telefone`) VALUES
+	(1, 'Junio', 'Rua Francisco Sales', '11222568965', 999324669);
+/*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
+
+-- Copiando dados para a tabela locacao.solicitacao: ~5 rows (aproximadamente)
+/*!40000 ALTER TABLE `solicitacao` DISABLE KEYS */;
+INSERT INTO `solicitacao` (`id`, `nomeCarro`, `tempo`, `data`, `hora`, `situacao`) VALUES
+	(1, 'Fiat Uno', 2, '2018-06-04', '08:12:23', 'sim'),
+	(2, 'Gol', 3, '2018-06-04', '08:26:22', 'sim'),
+	(5, 'Fiat Uno', 1, '2018-06-12', '23:00:00', 'nao'),
+	(6, 'Gol', 3, '2018-06-14', '01:00:00', 'sim'),
+	(7, 'Hillux', 4, '2018-06-15', '02:01:00', 'nao');
+/*!40000 ALTER TABLE `solicitacao` ENABLE KEYS */;
+
+-- Copiando dados para a tabela locacao.usuarios: ~4 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` (`id`, `login`, `senha`, `tipo`) VALUES
+	(1, 'user1', '123456', 'normal'),
+	(2, 'admin', 'ifs', 'admin'),
+	(3, 'user2', '123', 'normal'),
+	(4, 'user3', 'ifs', 'admin');
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

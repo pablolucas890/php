@@ -1,0 +1,22 @@
+		
+		
+	    
+        $sql = "SELECT * FROM carros";
+        $result=$conn->query($sql);	
+        if($result->num_rows > 0){
+			while($row = $result->fetch_assoc()){
+			echo $row["nomeCarro"];
+			echo " ";
+			echo $row["data"];
+			echo " ";
+			echo $row["hora"];
+			echo " ";
+			echo "<button type='submit' name='id' value='".$row["id"]."'>";
+			echo "Alugar";
+			echo "</button>";
+			echo "<br />";
+			}
+		}else{
+			echo"Sem registros";
+        }
+		
