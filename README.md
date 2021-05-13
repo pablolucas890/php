@@ -1,3 +1,6 @@
+<img alt="inicio" src="gif1.gif" />
+<img alt="inicio" src="gif2.gif" />
+<hr>
 <h1 align="center"> php </h1>
 <h3 align="center">Repositório destinado ao estudo da linguagem php</h3>
 
